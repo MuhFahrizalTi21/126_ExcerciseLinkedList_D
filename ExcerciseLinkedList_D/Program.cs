@@ -76,7 +76,10 @@ namespace ExcerciseLinkedList_D
 
             while (true)
             {
-                
+                try
+                {
+
+                }
             }
         }
     }
