@@ -50,6 +50,11 @@ namespace ExcerciseLinkedList_D
                 Console.WriteLine("\nRecords in the list are:\n");
                 Node currentNode;
                 currentNode = LAST.next;
+                while (currentNode != LAST)
+                {
+                    Console.WriteLine(currentNode.rollNumber + " " + currentNode.name + "\n");
+                    currentNode = currentNode.next;
+                }
             }
         }
     }
