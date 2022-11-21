@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,35 @@ namespace ExcerciseLinkedList_D
             Node newnode = new Node();
             newnode.rollNumber = rollNo;
             newnode.name = nm;
+
+            if (LAST == null || rollNo <= LAST.rollNumber)
+            {
+                if ((LAST!= null) && (rollNo == LAST.rollNumber))
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                newnode.next = LAST.next;
+                LAST.next = newnode;
+                return;
+            }
+            Node previous, current;
+            previous = LAST;
+            current = LAST;
+
+            while ((current != null) && (rollNo >= current.rollNumber))
+            {
+                if (rollNo == current.rollNumber)
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                previous.next = current;
+                previous.next = newnode;
+            }
+            newnode.next = LAST.next;
+            LAST.next = newnode;
+            LAST = newnode;
         }
         public bool Search(int rolNo, ref Node previous, ref Node current)
         {
