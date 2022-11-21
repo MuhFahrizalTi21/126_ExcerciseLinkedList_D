@@ -24,6 +24,13 @@ namespace ExcerciseLinkedList_D
         {
             int rollNo;
             string nm;
+            Console.Write("\nEnter the roll number of the student : ");
+            rollNo = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the Name of the student : ");
+            nm = Console.ReadLine();
+            Node newnode = new Node();
+            newnode.rollNumber = rollNo;
+            newnode.name = nm;
         }
         public bool Search(int rolNo, ref Node previous, ref Node current)
         {
