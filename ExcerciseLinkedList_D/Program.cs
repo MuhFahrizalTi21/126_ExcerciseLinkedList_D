@@ -40,6 +40,18 @@ namespace ExcerciseLinkedList_D
             else
                 return false ;
         }
+
+        public void traverse()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is Empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the list are:\n");
+                Node currentNode;
+                currentNode = LAST.next;
+            }
+        }
     }
     internal class Program
     {
