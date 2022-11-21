@@ -32,6 +32,14 @@ namespace ExcerciseLinkedList_D
             else 
                 return (false);
         }
+
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true ;
+            else
+                return false ;
+        }
     }
     internal class Program
     {
