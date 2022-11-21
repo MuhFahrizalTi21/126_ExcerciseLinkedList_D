@@ -72,6 +72,12 @@ namespace ExcerciseLinkedList_D
     {
         static void Main(string[] args)
         {
+            CircularList obj = new CircularList();
+
+            while (true)
+            {
+                
+            }
         }
     }
 }
