@@ -55,6 +55,7 @@ namespace ExcerciseLinkedList_D
                     Console.WriteLine(currentNode.rollNumber + " " + currentNode.name + "\n");
                     currentNode = currentNode.next;
                 }
+                Console.WriteLine(LAST.rollNumber + " " + LAST.name + "\n");
             }
         }
     }
