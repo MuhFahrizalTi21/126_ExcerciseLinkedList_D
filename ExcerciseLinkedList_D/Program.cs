@@ -62,6 +62,17 @@ namespace ExcerciseLinkedList_D
             LAST.next = newnode;
             LAST = newnode;
         }
+        public bool delNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == LAST.next)
+                LAST.next = LAST.next.next;
+            return true;
+        }
         public bool Search(int rolNo, ref Node previous, ref Node current)
         {
             for (previous = current = LAST.next; current != LAST; previous = current, current = current.next)
