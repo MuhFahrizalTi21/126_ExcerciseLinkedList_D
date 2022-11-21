@@ -12,6 +12,10 @@ namespace ExcerciseLinkedList_D
         public string name;
         public Node next;
     }
+    class CircularList
+    {
+        Node LAST;
+    }
     internal class Program
     {
         static void Main(string[] args)
