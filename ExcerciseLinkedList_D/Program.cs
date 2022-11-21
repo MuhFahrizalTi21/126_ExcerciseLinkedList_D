@@ -20,6 +20,11 @@ namespace ExcerciseLinkedList_D
             LAST = null;
         }
 
+        public void addNode()
+        {
+            int rollNo;
+            string nm;
+        }
         public bool Search(int rolNo, ref Node previous, ref Node current)
         {
             for (previous = current = LAST.next; current != LAST; previous = current, current = current.next)
@@ -29,16 +34,16 @@ namespace ExcerciseLinkedList_D
             }
             if (rolNo == LAST.rollNumber)
                 return true;
-            else 
+            else
                 return (false);
         }
 
         public bool listEmpty()
         {
             if (LAST == null)
-                return true ;
+                return true;
             else
-                return false ;
+                return false;
         }
 
         public void traverse()
@@ -67,9 +72,8 @@ namespace ExcerciseLinkedList_D
                 Console.WriteLine("\nThe first record in the last is:\n\n" +
                     LAST.next.rollNumber + " " + LAST.next.name);
         }
-    }
-    internal class Program
-    {
+
+
         static void Main(string[] args)
         {
             CircularList obj = new CircularList();
@@ -120,14 +124,14 @@ namespace ExcerciseLinkedList_D
                             break;
                         case '4':
                             return;
-                            default:
+                        default:
                             {
                                 Console.WriteLine("Invalid option");
                                 break;
                             }
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.ToString());
                 }
