@@ -19,6 +19,19 @@ namespace ExcerciseLinkedList_D
         {
             LAST = null;
         }
+
+        public bool Search(int rolNo, ref Node previous, ref Node current)
+        {
+            for (previous = current = LAST.next; current != LAST; previous = current, current = current.next)
+            {
+                if (rolNo == current.rollNumber)
+                    return (true);
+            }
+            if (rolNo == LAST.rollNumber)
+                return true;
+            else 
+                return (false);
+        }
     }
     internal class Program
     {
